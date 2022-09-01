@@ -93,6 +93,7 @@ if [ -n "$DOTFILES_REPO" ]; then
 
     # run install script, if it exists
     [ -f "$HOME/dotfiles/install.sh" ] && $HOME/dotfiles/install.sh
+    sed -i.bak 's/auth: password/auth: none/' ~/.config/code-server/config.yaml
 fi
 
 echo "[$PREFIX] Starting code-server..."

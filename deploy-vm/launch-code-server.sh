@@ -24,7 +24,6 @@ mkdir -p /home/coder/.config/code-server
 touch /home/coder/.config/code-server/config.yaml
 echo "link: true" > /home/coder/.config/code-server/config.yaml
 chown -R coder:coder /home/coder/.config
-sed -i.bak 's/auth: password/auth: none/' ~/.config/code-server/config.yaml
 # start and enable code-server and our helper service
 systemctl enable --now code-server@coder
 systemctl enable --now coder-cloud-redirect
